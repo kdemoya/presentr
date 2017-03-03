@@ -13,6 +13,7 @@ import ListSlide from './ListSlide';
 import CounterSlide from './CounterSlide';
 import CodeSlide from './CodeSlide';
 import QuoteSlide from './QuoteSlide';
+import VideoSlide from './VideoSlide';
 import DevTools from '../containers/DevTools';
 
 let styles = {};
@@ -116,6 +117,8 @@ class Presentation extends Component {
         return <CodeSlide slide={currentSlide} counter={counter} actions={actions} />;
       case 'quote':
         return <QuoteSlide slide={currentSlide} />;
+      case 'video':
+        return <VideoSlide slide={currentSlide} />;
       default:
         return <div>Oops...</div>;
     }
