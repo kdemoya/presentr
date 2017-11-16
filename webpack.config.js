@@ -5,14 +5,15 @@ const libraryName = 'presentr';
 
 module.exports = {
   externals: [nodeExternals()],
-  entry: ['./entry.js'],
+  entry: ['./src/index.js'],
   target: 'node',
   output: {
     path: path.join(__dirname, 'lib'),
     filename: `${libraryName}.js`,
     publicPath: '/lib/',
     library: libraryName,
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
+    libraryExport: 'default',
     umdNamedDefine: true
   },
   resolve: {

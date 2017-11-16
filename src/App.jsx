@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | App.jsx
+ * presentr | App.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */
@@ -18,13 +18,14 @@ require('../node_modules/highlight.js/styles/monokai.css');
 
 const App = ({ slides }) => {
   const preloadedState = {
+    slides: slides,
     currentSlide: slides.slide1,
     step: 1,
     totalSlides: Object.keys(slides).length,
     counter: 0,
   };
 
-  const store = createStore(slidesReducer, preloadedState, DevTools.instrument());
+  const store = createStore(slidesReducer.default, preloadedState, DevTools.instrument());
 
   return (
     <Provider store={store}>

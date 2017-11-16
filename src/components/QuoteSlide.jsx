@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | QuoteSlide.jsx
+ * presentr | QuoteSlide.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

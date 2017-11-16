@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | DevTools.jsx
+ * presentr | DevTools.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

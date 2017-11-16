@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | slides.js
+ * presentr | slides.js
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */
@@ -34,7 +34,7 @@ function getSlide(state, slideNumber) {
  * @param {String} action - Fired action.
  * @returns {Object} Returns the app's new state.
  */
-export default function slides(state = initialState, action) {
+export default function slides(state, action) {
   switch (action.type) {
     case GET_SLIDE:
       return getSlide(state, action.slideNumber);

@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | ListImageSlide.jsx
+ * presentr | ListImageSlide.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

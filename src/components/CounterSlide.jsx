@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | CounterSlide.jsx
+ * presentr | CounterSlide.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

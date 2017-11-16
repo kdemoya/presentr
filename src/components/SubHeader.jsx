@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | SubHeader.jsx
+ * presentr | SubHeader.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

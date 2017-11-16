@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | List.jsx
+ * presentr | List.jsx
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */

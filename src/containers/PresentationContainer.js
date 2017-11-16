@@ -1,5 +1,5 @@
 /**
- * barcamp-redux | PresentationContainer.js
+ * presentr | PresentationContainer.js
  *
  * @author Kelvin De Moya <http://github.com/kdemoya>.
  */
