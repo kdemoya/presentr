@@ -1,7 +1,7 @@
 {
   "name": "presentr",
-  "version": "1.0.1",
-  "description": "Simple slides presentation framework in React and Redux.",
+  "version": "1.0.2",
+  "description": "Configuration based presentation engine.",
   "main": "./lib/presentr.js",
   "repository": {
     "url": "https://github.com/kdemoya/presentr",
