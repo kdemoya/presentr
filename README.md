@@ -54,7 +54,7 @@ presentr('app', slidesConfig);
 
 ## Boilerplate
 If you want a working solution out of the box, just:
-1. Download [this boilerplate](https://github.com/kdemoya/presentr).
+1. Download [this boilerplate](https://github.com/kdemoya/presentr-boilerplate).
 2. `yarn` or `npm install`.
 3. Add your slides configuration to `slides.js`.
 4. `yarn run start` or `npm start`
