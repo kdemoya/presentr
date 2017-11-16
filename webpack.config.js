@@ -1,19 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
+const libraryName = 'presentr';
 
 module.exports = {
-  entry: ['webpack-hot-middleware/client', './app/index.js'],
+  externals: [nodeExternals()],
+  entry: ['./entry.js'],
+  target: 'node',
   output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
-    publicPath: '/build/'
+    path: path.join(__dirname, 'lib'),
+    filename: `${libraryName}.js`,
+    publicPath: '/lib/',
+    library: libraryName,
+    libraryTarget: 'commonjs',
+    umdNamedDefine: true
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     preLoaders: [
       {

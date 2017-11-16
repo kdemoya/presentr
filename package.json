@@ -15,9 +15,6 @@
     "lint": "node_modules/.bin/eslint app/"
   },
   "dependencies": {
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "html-loader": "^0.4.5",
     "lodash": "^4.16.6",
     "react": "^15.3.2",
     "react-anime": "^0.3.4",
@@ -28,11 +25,14 @@
     "redux": "^3.6.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-inspector": "^0.9.1",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "redux-devtools-inspector": "^0.9.1"
   },
   "devDependencies": {
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.5",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.7",
@@ -45,10 +45,7 @@
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
-    "react-hot-loader": "^3.0.0-beta.6",
     "webpack": "^1.13.3",
-    "webpack-dev-middleware": "^1.8.4",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-hot-middleware": "^2.13.1"
+    "webpack-node-externals": "^1.6.0"
   }
 }

@@ -5,20 +5,6 @@
  */
 
 import { GET_SLIDE, INCREASE_COUNTER, DECREASE_COUNTER } from '../actions/slide';
-import slidesConfig from '../slides';
-
-
-/**
- * App's initial state, Redux will use this values
- * to bootstrap our app, before having a generated state.
- */
-const initialState = {
-  currentSlide: slidesConfig.slide1,
-  step: 1,
-  totalSlides: Object.keys(slidesConfig).length,
-  counter: 0,
-};
-
 
 /**
  * Finds the next slide to show, based on requested slide number.
@@ -28,9 +14,11 @@ const initialState = {
  * @returns {Object} Returns the correct slide.
  */
 function getSlide(state, slideNumber) {
-  const requestedSlide = slidesConfig[`slide${slideNumber}`];
+  const slideKey = `slide${slideNumber}`;
+  const requestedSlide = state.slides[slideKey];
 
   if (!requestedSlide) {
+    console.err(`${slideKey} not found.`);
     return state;
   }
 
