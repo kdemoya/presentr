@@ -39,8 +39,8 @@ styles = {
     maxWidth: '200px',
     borderRadius: '100px',
     position: 'absolute',
-    top: '-147px',
-    left: '40%',
+    top: '-130px',
+    left: '18vw',
   },
   quote: {
     backgroundColor: '#ffd8dd',

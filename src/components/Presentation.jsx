@@ -25,13 +25,8 @@ class Presentation extends Component {
    *
    * @returns {Object} Style object.
    */
-  static getContentStyle(currentSlide) {
-    switch (currentSlide.type) {
-      case 'simple':
-        return styles.simpleSlideContent;
-      default:
-        return styles.simpleSlideContent;
-    }
+  static getContentStyle(type) {
+    return styles[type];
   }
 
   componentWillMount() {
@@ -142,7 +137,7 @@ class Presentation extends Component {
           direction="alternate"
           scale={[1, 1.025]}
         >
-          <div style={Presentation.getContentStyle(currentSlide)}>
+          <div style={Object.assign(styles.base, Presentation.getContentStyle(currentSlide.type))}>
             {this.renderSlide(currentSlide)}
           </div>
         </Anime>
@@ -167,10 +162,15 @@ Presentation.propTypes = {
 };
 
 styles = {
-  simpleSlideContent: {
+  base: {
     width: '50vw',
     margin: '0 auto',
+  },
+  simple: {
     overflow: 'hidden',
+  },
+  quote: {
+    overflow: 'visible',
   },
 };
 

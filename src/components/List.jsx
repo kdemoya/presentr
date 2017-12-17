@@ -21,7 +21,7 @@ List.propTypes = {
 
 styles = {
   list: {
-    fontSize: 50,
+    fontSize: 40,
     color: '#FFFFFF',
     textAlign: 'left',
   },

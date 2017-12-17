@@ -19,7 +19,7 @@ const ListImageSlide = (props) => {
       { header && <Header fit={headerFit}>{header}</Header> }
       { subHeader && <SubHeader>{subHeader}</SubHeader> }
       <div style={styles.wrapper}>
-        <div>
+        <div style={styles.imageWrapper}>
           <img style={styles.image} src={image} alt="" />
         </div>
         <div style={styles.listWrapper}>
@@ -48,7 +48,10 @@ styles = {
     marginTop: '40px',
   },
   image: {
-    maxWidth: '380px',
+    maxWidth: '20vw',
+  },
+  imageWrapper: {
+    alignSelf: 'center',
   },
   listWrapper: {
     display: 'flex',
