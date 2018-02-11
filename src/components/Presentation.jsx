@@ -21,12 +21,16 @@ let styles = {};
 class Presentation extends Component {
   /**
    * Generate an object with the slides content styles,
-   * based on the current slide type.
+   * based on the current slide type and width.
    *
    * @returns {Object} Style object.
    */
-  static getContentStyle(type) {
-    return styles[type];
+  static getContentStyle({ type, width = '50vw' }) {
+    return {
+      ...styles.base,
+      ...styles[type],
+      width,
+    };
   }
 
   componentWillMount() {
@@ -137,7 +141,7 @@ class Presentation extends Component {
           direction="alternate"
           scale={[1, 1.025]}
         >
-          <div style={Object.assign(styles.base, Presentation.getContentStyle(currentSlide.type))}>
+          <div style={Presentation.getContentStyle(currentSlide)}>
             {this.renderSlide(currentSlide)}
           </div>
         </Anime>
@@ -150,6 +154,7 @@ Presentation.propTypes = {
   currentSlide: PropTypes.shape({
     type: PropTypes.string.isRequired,
     background: PropTypes.string,
+    width: PropTypes.string,
   }).isRequired,
   actions: PropTypes.shape({
     getSlide: PropTypes.func.isRequired,
@@ -163,7 +168,6 @@ Presentation.propTypes = {
 
 styles = {
   base: {
-    width: '50vw',
     margin: '0 auto',
   },
   simple: {

@@ -34,6 +34,7 @@ const slidesConfig = {
     type: 'simple',
     header: 'Hello World!',
     notes: 'Notes for speakers view.'
+    width: '80vw',
   },
   slide2: {
     type: 'list',
@@ -64,8 +65,9 @@ If you want a working solution out of the box, just:
 ### simple:
 Renders a simple slide with title and subtitle.
 ##### Options:
- - `header` - String or array of strings 
+ - `header` - String or array of strings
  - `subHeader` - String
+ - `width` - String
 
 ### image:
 Renders a slide with an image.
@@ -73,12 +75,14 @@ Renders a slide with an image.
  - `header` - String
  - `subHeader` - String
  - `image` - String
- 
+ - `width` - String
+
 ### list:
 Renders a slide with an list.
 ##### Options:
  - `list` - Array of strings
- 
+ - `width` - String
+
 ### listImage:
 Renders a slide with an image and a list.
 ##### Options:
@@ -86,15 +90,17 @@ Renders a slide with an image and a list.
  - `subHeader` - String
  - `image` - String
  - `list` - Array of strings
- 
+ - `width` - String
+
 ### quote:
 Renders a slide with a quote and its author.
 ##### Options:
  - `quote` - String
  - `author` - String
  - `image` - String
- 
- 
+ - `width` - String
+
+
 ## Speaker Mode
 All slides accepts a property called `notes`, which receive a string.
 When you run your server, you can go to `/speaker` in another browser tab or window to see a private screen with the current slides progress
